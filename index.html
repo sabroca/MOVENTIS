@@ -1,0 +1,90 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOVENTIS NEWS</title>
+  <meta name="description" content="Blog da MOVENTIS Contabilidade e BPO: novidades, dicas e insights sobre contabilidade, fiscal e gestão.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/ico.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo MOVENTIS" class="logo">
+      <h1 class="brand-title">NEWS<span></span></h1>
+    </div>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#home" class="nav-link">INÍCIO</a>
+      <a href="https://www.nopapercontabil.com/" target="_blank" rel="noopener" class="nav-link">SITE</a>
+      <a href="#contato" class="nav-link">CONTATO</a>
+    </nav>
+  </header>
+
+  <main id="home" class="container">
+    <section class="intro">
+      <h2 class="section-title">Últimas Notícias</h2>
+      <p class="section-subtitle">Fique por dentro das tendências, dicas e novidades em contabilidade, fiscal e BPO.</p>
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="Pesquisar por título ou descrição…" aria-label="Pesquisar no blog"/>
+        <select id="categoryFilter" aria-label="Filtrar por categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+      </div>
+    </section>
+    <section id="cards" class="card-grid" aria-live="polite">
+      <noscript>Ative o JavaScript para ver as notícias.</noscript>
+    </section>
+  </main>
+
+ 
+  <!-- ===== Fim da seção contato ===== -->
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <img src="assets/logo.png" alt="Logo MOVENTIS" class="logo small">
+        <span class="company">MOVENTIS Contabilidade e BPO</span>
+      </div>
+  
+      <nav class="footer-nav" aria-label="Links úteis">
+        <a href="#home">Início</a>
+        <a href="https://www.nopapercontabil.com/" target="_blank" rel="noopener">Site</a>
+        <a href="#contato">Contato</a>
+      </nav>
+  
+      <div class="footer-right">
+        <span>© <span id="year"></span> MOVENTIS</span>
+      </div>
+    </div>
+  
+    <!-- Créditos -->
+    <div class="footer-credit">
+      <p>Site criado por <a href="https://sabroca.github.io/2ClicksWeb/" target="_blank" rel="noopener">2 Clicks Web</a></p>
+    </div>
+  </footer>
+  
+
+  <dialog id="postModal" class="modal">
+    <article class="modal-content">
+      <button class="close" aria-label="Fechar">×</button>
+      <div class="modal-header">
+        <span class="badge" id="modalBadge"></span>
+        <h3 id="modalTitle"></h3>
+      </div>
+      <p class="meta" id="modalMeta"></p>
+      <div id="modalBody" class="modal-body"></div>
+    </article>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
